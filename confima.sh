@@ -2,7 +2,7 @@
 read -p "Nome: " Nome
 if [ "$Nome" == "$(cat banco.txt | grep ^$Nome | cut -d ':' -f 1 )" ]; then
 read -p "Email: " Email
-	if [ "$Email" == "$( cat informaçoes.txt | grep $Email | cut -d ':' -f 2)" ]; then 
+	if [ "$Email" == "$( cat banco.txt | grep $Email | cut -d ':' -f 2)" ]; then 
 	read -p "Telefone: " Tel
 		if [ "$Tel" == "$( cat banco.txt | grep -E '[(][0-9]{2}[)][" "][0-9]{4}+-[0-9]{4}' | cut -d ':' -f3)" ]; then  
 		read -p "RG: " RG 
