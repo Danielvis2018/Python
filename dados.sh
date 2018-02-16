@@ -1,6 +1,6 @@
 #!/bin/bash/
 #Criador: Daniel De Jesus Oliveira
-
+clear
 
 NOME(){
 	read -p "Digite seu nome: " nome
