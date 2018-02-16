@@ -118,7 +118,7 @@ DATA(){
 IP(){
 	echo "Exemplo: 192.168.0.1"
 	read -p "Digite o seu ip: " ip
-	echo $ip | grep -E '^[0-9]{1,3}[.][0-9]{1,3}[.][0-9]{1,3}[.][0-9]{1,3}$'
+	echo $ip | grep -E '^[0-9]{1,3}[.][0-9]{1,3}[.][0-9]{1,3}[.][1-9]{1,3}$'
 	if [ $? == 0 ]; then
 		clear
 		echo "Ip correto!"
