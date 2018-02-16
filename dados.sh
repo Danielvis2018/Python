@@ -1,6 +1,7 @@
 #!/bin/bash/
 #Criador: Daniel De Jesus Oliveira
 
+
 NOME(){
 	read -p "Digite seu nome: " nome
 	echo $nome | grep '^[0-9.-\=_,><?:;!@#$%*&()_+\""][  ]$'  
@@ -149,5 +150,6 @@ MASC(){
 		clear
 		MASC
 	fi
+echo "$nome:$email:$Tel:$rg:$cpf:$data:$ip:$masc" >> banco.txt 
 }
 NOME
