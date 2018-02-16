@@ -1,5 +1,6 @@
 #!/bin/bash/
 #Criador: Daniel De Jesus Oliveira
+
 clear
 
 NOME(){
