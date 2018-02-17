@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 read -p "Nome: " Nome
 if [ "$Nome" == "$(cat banco.txt | grep ^$Nome | cut -d ':' -f 1 )" ]; then
 read -p "Email: " Email
