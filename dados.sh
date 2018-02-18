@@ -5,7 +5,7 @@ clear
 
 NOME(){
 	read -p "Digite seu nome: " nome
-	echo $nome | grep '^[0-9.-\=_,><?:;!@#$%*&()_+\""][  ]$'  
+	echo $nome | grep -E '[0-9.-\=_,><?:;!@#$%"*&()_+"\]'  
 	if [ $? == 1 ]; then 
 		clear
 		echo "Nome Correto!"
@@ -22,6 +22,7 @@ NOME(){
 }
 
 EMAIL(){
+	echo "Exemplo: daniel@senai.com ou daniel@senai.com.br"
 	read -p "Digite seu email: " email
 	echo $email | grep -E '^([a-zA-Z0-9_-.])+@[0-9a-zA-Z.-]+\.[a-z]{2,3}$'
 	if [ $? == 0 ]; then
