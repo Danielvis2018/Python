@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-#Criador: Daniel De Jesus Oliveira
+#Criador:Daniel De Jesus Oliveira
 import re
 
 #validar nome

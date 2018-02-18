@@ -1,7 +1,25 @@
 #!/bin/bash
-Criador: Daniel De Jesus Oliveira
-
+#Criador: Daniel De Jesus Oliveira
 clear
+
+NOME(){
+	echo "Exemplo: Daniel"
+	read -p "Digite seu nome: " nome
+	echo $nome | grep -E '[0-9.-\=_,><?:;!@#$%"*&()_+"\]'  
+	if [ $? == 1 ]; then 
+		clear
+		echo "Nome Correto!"
+		sleep 1
+		clear
+		EMAIL
+	else
+		echo "Nome Incorreto!"	
+		echo "Tente Novamente :/ "
+		sleep 1
+		clear
+		NOME
+	fi
+}
 
 
 EMAIL(){
@@ -137,4 +155,7 @@ MASC(){
 	fi
 echo "$nome:$email:$Tel:$rg:$cpf:$data:$ip:$masc" >> banco.txt 
 }
+
 EMAIL
+
+NOME
