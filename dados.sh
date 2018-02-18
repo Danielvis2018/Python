@@ -4,6 +4,7 @@ Criador: Daniel De Jesus Oliveira
 clear
 
 NOME(){
+	echo "Exemplo: Daniel"
 	read -p "Digite seu nome: " nome
 	echo $nome | grep -E '[0-9.-\=_,><?:;!@#$%"*&()_+"\]'  
 	if [ $? == 1 ]; then 
@@ -24,7 +25,7 @@ NOME(){
 EMAIL(){
 	echo "Exemplo: daniel@senai.com ou daniel@senai.com.br"
 	read -p "Digite seu email: " email
-	echo $email | grep -E '^([a-zA-Z0-9_-.])+@[0-9a-zA-Z.-]+\.[a-z]{2,3}$'
+	echo $email | grep -E '^([a-zA-Z0-9_-.])+@[0-9a-zA-Z.-]+(\.com|\.br)|(\.com\.br)$'
 	if [ $? == 0 ]; then
 		clear
 		echo "Email Correto!"
@@ -119,7 +120,7 @@ DATA(){
 IP(){
 	echo "Exemplo: 192.168.0.1"
 	read -p "Digite o seu ip: " ip
-	echo $ip | grep -E '^[0-9]{1,3}[.][0-9]{1,3}[.][0-9]{1,3}[.][1-9]{1,3}$'
+	echo $ip | grep -E '^(((([2]([5][0-5]|[0-4][0-9])|[0-9][0-9])|[0-9])\.)|(1[0-9][0-9]\.)){3}((([2]([5][0-5]|[0-4][0-9])|[0-9][0-9])|[0-9])|[1][0-9][0-9])$'
 	if [ $? == 0 ]; then
 		clear
 		echo "Ip correto!"
@@ -138,7 +139,7 @@ IP(){
 MASC(){
 	echo "Exemplo: 255.255.255.0"
 	read -p "Digite sua Mascara de Rede: " masc
-	echo $masc | grep -E '^[0-9]{1,3}[.][0-9]{1,3}[.][0-9]{1,3}[.][0-9]{1,3}$'
+	echo $masc | grep -E '^(((([2]([5][0-5]|[0-4][0-9])|[0-9][0-9])|[0-9])\.)|(1[0-9][0-9]\.)){3}((([2]([5][0-5]|[0-4][0-9])|[0-9][0-9])|[0-9])|[1][0-9][0-9])$'
 	if [ $? == 0 ]; then
 		clear
 		echo "Mascara de Rede correta!"
