@@ -44,7 +44,7 @@ EMAIL(){
 TEL(){
 	echo "Exemplo : (11) 4608-5519"
 	read -p "Digite Seu Telefone: " Tel 
-	echo $Tel | grep -E '^[(][0-9]{2}[)][" "][0-9]{4}+-[0-9]{4}$'
+	echo $Tel | grep -E '^[(][0-9]{2}[)][" "][0-9]{4,5}+-[0-9]{4}$'
 	if [ $? == 0 ]; then 
 		clear
 		echo "Telefone Correto!"
