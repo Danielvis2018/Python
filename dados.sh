@@ -156,6 +156,4 @@ MASC(){
 echo "$nome:$email:$Tel:$rg:$cpf:$data:$ip:$masc" >> banco.txt 
 }
 
-EMAIL
-
 NOME
