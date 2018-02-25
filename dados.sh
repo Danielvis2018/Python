@@ -101,7 +101,7 @@ CPF(){
 DATA(){
 	echo "Exemplo: dd/mm/aaaa"
 	read -p "Digite a sua Data de Nascimento: " data
-	echo $data | grep -E '^[0-3]{1}[0-9]{1}[/][0-1]{1}[0-9]{1}[/][0-9]{4}$'
+	echo $data | grep -E '^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(19[0-9]{2}|200[0-9]|201[0-7])$'
 	if [ $? == 0 ]; then
 		clear
 		echo "Data correta!"
