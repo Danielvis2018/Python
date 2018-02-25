@@ -5,7 +5,7 @@ clear
 NOME(){
 	echo "Exemplo: Daniel"
 	read -p "Digite seu nome: " nome
-	echo $nome | grep -E '[0-9.-\=_,><?:;!@#$%"*&()_+"\]'  
+	echo $nome | grep -E '^[0-9.-\=_,><?:;!@#$%"*&()_+"\]$'  
 	if [ $? == 1 ]; then 
 		clear
 		echo "Nome Correto!"
